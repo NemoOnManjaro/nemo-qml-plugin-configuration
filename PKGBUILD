@@ -5,16 +5,16 @@
 
 pkgname=nemo-qml-plugin-configuration-git
 pkgver=0.2.3.r0.g917ed97
-pkgrel=1
+pkgrel=2
 pkgdesc="Configuration plugin for Nemo Mobile"
 arch=('x86_64' 'aarch64')
-url="https://git.sailfishos.org/mer-core/nemo-qml-plugin-configuration"
+url="https://github.com/sailfishos/nemo-qml-plugin-configuration"
 license=('BSD')
-depends=('qt5-mlite-git' 'nemo-qml-plugin-dbus')
+depends=('mlite' 'nemo-qml-plugin-dbus')
 makedepends=('git')
 provides=("${pkgname%-git}")
 conflicts=("${pkgname%-git}")
-source=('git+https://git.sailfishos.org/mer-core/nemo-qml-plugin-configuration.git')
+source=("${pkgname%-git}::git+${url}")
 md5sums=('SKIP')
 
 pkgver() {
